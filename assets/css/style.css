@@ -190,12 +190,12 @@ footer {
 }
 
 .footer_left .song_details {
-    flex-basis: 60%;
+    flex-basis: 80%;
 }
 
 .like_n_folder {
     flex-wrap: wrap;
-    flex-basis: 40%;
+    flex-basis: 20%;
     align-items: center;
 }
 
@@ -418,7 +418,6 @@ input[type="range"]::-moz-range-thumb {
     /* #region footer */
 
     .like_n_folder {
-        
         flex-direction: column;
         justify-content: center;
        
