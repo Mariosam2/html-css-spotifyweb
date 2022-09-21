@@ -98,6 +98,16 @@ footer {
     font-size: 1.2rem;
 }
 
+
+
+
+
+
+
+input[type="range"]::-webkit-slider-thumb,
+input[type="range"]::-moz-range-thumb {
+    visibility: hidden;
+}
 /* #endregion */
 
 /* #region debug */
@@ -152,6 +162,7 @@ footer {
 
 @media screen and (max-width: 480px) {
     nav {
+
         width: 80px;
     }
 }
