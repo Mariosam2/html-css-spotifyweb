@@ -342,8 +342,11 @@ input[type="range"]::-moz-range-thumb {
         font-size: 12px;
      }
     
+    .footer_left {
+        flex-grow: 1;
+    }
 
-   
+    
     .footer_left img {
         max-width: 40%;
     }
@@ -351,6 +354,10 @@ input[type="range"]::-moz-range-thumb {
     .footer_left .song_name {
         padding: none;
         padding-left: 1rem;
+    }
+
+    .footer_center {
+        flex-basis: 50%;
     }
 
     .like_n_folder {
