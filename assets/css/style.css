@@ -64,41 +64,83 @@
 header {
     width: 225px;
     background-color: var(--var-black);
-    padding: 1rem;
+    padding: 1rem 1rem 0 1rem;
+    color: white;
     flex-direction: column;
+    
+   
 }
 
-header >* {
-    width: 80%;
+header >*:not(picture) {
+    width: 100%;
+    height: fit-content;
     padding-bottom: 1rem;
+      
     
 }
-header h3 {
-    color: white;
-}
 
-header ul li:hover a {
-    color: white;
+header picture {
+    width: 70%;
+    height: fit-content;
+    padding-bottom: 1rem;
 }
 
 #site_nav ul li a i {
     font-size: 1.3rem;
 }
 
-header #site_nav ul li:hover a i {
-    color: wheat;
-}
 header ul li {
     padding: 0.4rem 0;
 }
 
-header ul li a i {
-    margin-right: 0.3rem;
+header .playlist li {
+    font-size: 0.9rem;
+
+}
+
+header i, .profile img {
+    margin-right: 0.5rem;
 }
 
 ul li .create {
     font-size: 1.1rem;
 }
+
+.playlist {
+    flex-grow: 1;
+}
+
+header ul li:hover a, .install:hover {
+    color: white;
+    cursor: pointer;
+}
+
+header ul li:hover a i {
+    filter: brightness(95%);
+}
+
+.profile, .header_bottom .install  {
+    display: flex;
+    align-items: center;
+}
+
+.header_bottom {
+    align-self: flex-end;
+}
+
+.header_bottom >* {
+    margin-top: 1rem;
+}
+
+.profile img {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: var(--var-caption-text);
+    object-fit: contain;
+}
+
+
 
 
 /* #endregion */
@@ -115,20 +157,23 @@ footer {
     height: 100px;
     background-color: var(--var-bg-footer);
     color: white;
+    padding: 1rem 0;
+    justify-content: space-between;
 
 }
 
 .footer_left, .footer_right {
-    flex-basis: 20%;
+    flex-basis: 15%;
 }
 
-.footer_center {
-    flex-grow: 1;
-}
+
 
 .footer_left {
-    justify-content: space-around;
+    padding-left: 0.5rem;
 }
+
+
+
 
 .footer_left img {
     max-width: 30%;
@@ -137,7 +182,7 @@ footer {
 }
 
 .footer_left .song_name{
-    display: inline-block;
+    display: block;
     align-self: center;
     padding: 1rem;
     font-weight: 600;
@@ -149,17 +194,22 @@ footer {
     
 }
 
-.footer_left .song_details {
+.like_n_folder {
+    flex-wrap: wrap;
     flex-basis: 50%;
+    align-items: center;
 }
 
+
 .like_n_folder >* {
-    align-self: center;
-    padding: 0 0.5rem;
-    font-size: 1.2rem;
+    padding: 0 0.3rem;
+    font-size: 1.1rem;
+
 }
 
 .footer_center {
+    flex-basis: 60%;
+    flex-shrink: 2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,7 +217,7 @@ footer {
 
 .audio_player {
     text-align: center;
-    width: 80%;
+    width: 100%;
 }
 
 .audio_controls >* {
@@ -267,22 +317,110 @@ input[type="range"]::-moz-range-thumb {
 
 /* responsive - dekstop first */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1140px) {
+
+    .footer_left{
+        flex-basis: 25%;
+        
+    }
+
+   
+    
+   
+    .audio_controls >*:not(.fa-play) {
+        padding: 0 0.25rem;
+    }
+    .audio_controls .fa-play {
+        padding: 0 1rem;
+    }
     
 }
 
 
 @media screen and (max-width: 768px) {
+     html {
+        font-size: 12px;
+     }
     
+
+   
+    .footer_left img {
+        max-width: 40%;
+    }
+
+    .footer_left .song_name {
+        padding: none;
+        padding-left: 1rem;
+    }
+
+    .like_n_folder {
+        flex-wrap: nowrap;
+    }
+    .footer_right >:not(.volume) {
+        padding: 0 0.5rem;
+    }
 }
 
-@media screen and (max-width: 480px) {
-
+@media screen and (max-width: 640px) {
+    
     html {
         font-size: 10px;
     }
+    /* #region header */
     header {
 
         width: 80px;
     }
+
+    header ul li {
+        padding: 1rem 0;
+    }
+
+    
+
+    .toggle {
+       display: none;
+    }
+
+    #site_nav {
+        flex-grow: 1;
+    }
+
+    header, #site_nav, .header_bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    #site_nav ul li a i {
+        font-size: 3.2rem;
+    }
+
+    #site_nav ul li a i, .header_bottom i {
+        margin-right: 0;
+    }
+
+    .header_bottom i {
+        font-size: 1.6rem;
+    }
+
+    .header_bottom img {
+        width: 3.6rem;
+        height: 3.6rem;
+        margin-right: 0;
+    }
+    /* #endregion */
+    /* #region footer */
+
+    
+   
+
+   
+
+    /* #endregion */
+
+    
+
+   
 }

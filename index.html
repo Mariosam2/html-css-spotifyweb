@@ -25,14 +25,14 @@
                 </picture>
                 <nav id="site_nav">
                     <ul>
-                        <li><a class="caption" href="#"><i class="fa-solid fa-house"></i>Home</a></li>
-                        <li><a class="caption" href="#"><i class="fa-solid fa-magnifying-glass"></i>Cerca</a></li>
-                        <li><a class="caption" href="#"><i class="fa-solid fa-bars-staggered"></i>La tua libreria</a></li>
+                        <li><a class="caption" href="#"><i class="fa-solid fa-house"></i><span class="toggle">Home</span></a></li>
+                        <li><a class="caption" href="#"><i class="fa-solid fa-magnifying-glass"></i><span class="toggle">Cerca</span></a></li>
+                        <li><a class="caption" href="#"><i class="fa-solid fa-bars-staggered"></i><span class="toggle">La tua libreria</span></a></li>
                     </ul>
                 </nav>
-                <ul>
+                <ul class="playlist toggle">
                     <li><h3>PLAYLIST</h3></li>
-                    <li><a class="caption create d-flex align-center" href="#"><i class="fa-solid fa-square-plus fa-2x"></i>Crea Playlist</a></li>
+                    <li><a class="caption create d-flex align-center" href="#"><i class="fa-solid fa-square-plus fa-2x"></i><span class="toggle">Crea Playlist</span></a></li>
                     <li><a class="caption" href="#">Nome Playlist</a></li>
                     <li><a class="caption" href="#">Nome Playlist</a></li>
                     <li><a class="caption" href="#">Nome Playlist</a></li>
@@ -41,6 +41,11 @@
                     <li><a class="caption" href="#">Nome Playlist</a></li>
                     <li><a class="caption" href="#">Nome Playlist</a></li>
                 </ul>
+                <div class="header_bottom">
+                    <span class="caption install"><i class="fa-regular fa-circle-down"></i><span class="toggle">Installa app</span></span>
+                    <hr class="toggle">
+                    <span class="profile"><img src="./assets/img/profile.svg" alt=""><span class="toggle">John Doe</span></span>
+                </div>
             </header>
             <!-- /#site_nav -->
             <main id="site_main"></main>
