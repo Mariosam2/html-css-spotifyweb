@@ -1,6 +1,11 @@
 :root {
     --var-bg-footer: #282828;
     --var-caption-text: #717171;
+    --var-black: #000000;
+    --var-bg-upgrade: #080b12;
+    --var-bg-main: 141922;
+    --var-hover: #adff2f;
+
 }
 
 
@@ -21,12 +26,19 @@
     color: var(--var-caption-text);
  }
 
- nav, main {
+ header, main {
     height: calc(100vh - 100px);
  }
 
  img {
     max-width: 100%;
+ }
+
+ ul {
+    list-style-type: none;
+ }
+ a {
+    text-decoration: none;
  }
 
 /* Utilities */
@@ -48,10 +60,46 @@
     flex-wrap: wrap;
 }
 
-/* #region nav */
-nav {
-    width: 200px;
+/* #region header */
+header {
+    width: 225px;
+    background-color: var(--var-black);
+    padding: 1rem;
+    flex-direction: column;
 }
+
+header >* {
+    width: 80%;
+    padding-bottom: 1rem;
+    
+}
+header h3 {
+    color: white;
+}
+
+header ul li:hover a {
+    color: white;
+}
+
+#site_nav ul li a i {
+    font-size: 1.3rem;
+}
+
+header #site_nav ul li:hover a i {
+    color: wheat;
+}
+header ul li {
+    padding: 0.4rem 0;
+}
+
+header ul li a i {
+    margin-right: 0.3rem;
+}
+
+ul li .create {
+    font-size: 1.1rem;
+}
+
 
 /* #endregion */
 
@@ -188,13 +236,13 @@ input[type="range"]::-moz-range-thumb {
 }
 
 
-.debug nav {
+.debug header {
     background-color: green;
     content: "NAVBAR";
     
 }
 
-.debug nav::after {
+.debug header::after {
     content: "NAVBAR";
 }
 
@@ -229,7 +277,11 @@ input[type="range"]::-moz-range-thumb {
 }
 
 @media screen and (max-width: 480px) {
-    nav {
+
+    html {
+        font-size: 10px;
+    }
+    header {
 
         width: 80px;
     }

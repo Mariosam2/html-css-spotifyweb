@@ -18,7 +18,30 @@
 <body>
     <div class="wrapper d-flex">
         <div class="top d-flex">
-            <nav id="site_nav"></nav>
+            <header class="d-flex" id="site_header">
+                <picture>
+                    <source media="(max-width: 480px)" srcset="./assets/img/logo-small.svg">
+                    <img src="./assets/img/logo.svg" alt="logo">
+                </picture>
+                <nav id="site_nav">
+                    <ul>
+                        <li><a class="caption" href="#"><i class="fa-solid fa-house"></i>Home</a></li>
+                        <li><a class="caption" href="#"><i class="fa-solid fa-magnifying-glass"></i>Cerca</a></li>
+                        <li><a class="caption" href="#"><i class="fa-solid fa-bars-staggered"></i>La tua libreria</a></li>
+                    </ul>
+                </nav>
+                <ul>
+                    <li><h3>PLAYLIST</h3></li>
+                    <li><a class="caption create d-flex align-center" href="#"><i class="fa-solid fa-square-plus fa-2x"></i>Crea Playlist</a></li>
+                    <li><a class="caption" href="#">Nome Playlist</a></li>
+                    <li><a class="caption" href="#">Nome Playlist</a></li>
+                    <li><a class="caption" href="#">Nome Playlist</a></li>
+                    <li><a class="caption" href="#">Nome Playlist</a></li>
+                    <li><a class="caption" href="#">Nome Playlist</a></li>
+                    <li><a class="caption" href="#">Nome Playlist</a></li>
+                    <li><a class="caption" href="#">Nome Playlist</a></li>
+                </ul>
+            </header>
             <!-- /#site_nav -->
             <main id="site_main"></main>
             <!-- /#site_main -->
