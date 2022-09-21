@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body class="debug">
+
+<body>
     <div class="wrapper d-flex">
         <div class="top d-flex">
             <nav id="site_nav"></nav>
@@ -15,15 +23,31 @@
             <main id="site_main"></main>
             <!-- /#site_main -->
         </div>
-        <!-- /.top -->    
-    <footer id="site_footer"></footer>
-    <!--<div class="song_details"></div> -->
-    <!--<div class="audio_player"></div> -->
-    <!--<div class="volume"></div> -->
-    <!-- /.audio_player -->
+        <!-- /.top -->
+        <footer class="d-flex" id="site_footer">
+            <div class="footer_left d-flex">
+                <div class="song_details d-flex">
+                    <img src="./assets/img/sinister.jpeg" alt="">
+                    <span class="song_name">Sinister <br> <span class="caption">Brano Nome</span></span>
+
+                </div>
+                <div class="like_n_folder d-flex">
+                    <i class="fa-regular fa-heart caption"></i>
+                    <i class="fa-regular fa-folder caption"></i>
+                </div>
+            </div>
+            <div class="footer_center">
+                <div class="audio_player"></div>
+            </div>
+            <div class="footer_right">
+                <div class="volume"></div>
+            </div>
+        </footer>
+        <!-- /.audio_player -->
     </div>
     <!-- /.wrapper -->
-   
-    
+
+
 </body>
+
 </html>
