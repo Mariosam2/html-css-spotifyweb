@@ -157,7 +157,7 @@ footer {
     height: 100px;
     background-color: var(--var-bg-footer);
     color: white;
-    padding: 1rem 0;
+    padding: 1rem;
     justify-content: space-between;
 
 }
@@ -166,14 +166,9 @@ footer {
     flex-basis: 15%;
 }
 
-
-
 .footer_left {
-    padding-left: 0.5rem;
+    justify-content: center;
 }
-
-
-
 
 .footer_left img {
     max-width: 30%;
@@ -194,9 +189,13 @@ footer {
     
 }
 
+.footer_left .song_details {
+    flex-basis: 60%;
+}
+
 .like_n_folder {
     flex-wrap: wrap;
-    flex-basis: 50%;
+    flex-basis: 40%;
     align-items: center;
 }
 
@@ -243,7 +242,6 @@ footer {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 1rem;
 }
 
 .footer_right >*:not(.volume) {
@@ -317,16 +315,13 @@ input[type="range"]::-moz-range-thumb {
 
 /* responsive - dekstop first */
 
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 1200px) {
 
     .footer_left{
         flex-basis: 25%;
         
     }
 
-   
-    
-   
     .audio_controls >*:not(.fa-play) {
         padding: 0 0.25rem;
     }
@@ -352,7 +347,6 @@ input[type="range"]::-moz-range-thumb {
     }
 
     .footer_left .song_name {
-        padding: none;
         padding-left: 1rem;
     }
 
@@ -363,6 +357,8 @@ input[type="range"]::-moz-range-thumb {
     .like_n_folder {
         flex-wrap: nowrap;
     }
+
+   
     .footer_right >:not(.volume) {
         padding: 0 0.5rem;
     }
@@ -418,8 +414,18 @@ input[type="range"]::-moz-range-thumb {
         margin-right: 0;
     }
     /* #endregion */
+    
     /* #region footer */
 
+    .like_n_folder {
+        
+        flex-direction: column;
+        justify-content: center;
+       
+    }
+    .like_n_folder >* {
+        padding: 0.3rem 0;
+    }
     
    
 
