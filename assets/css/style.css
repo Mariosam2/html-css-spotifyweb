@@ -35,6 +35,19 @@
     display: flex;
 }
 
+
+.center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
 /* #region nav */
 nav {
     width: 200px;
@@ -49,7 +62,7 @@ main {
 
 /* #endregion */
 
-/* region footer(audio_player) */
+/* #region footer(audio_player) */
 footer {
     height: 100px;
     background-color: var(--var-bg-footer);
@@ -66,7 +79,7 @@ footer {
 }
 
 .footer_left {
-    padding: 1rem;
+    justify-content: space-around;
 }
 
 .footer_left img {
@@ -109,29 +122,61 @@ footer {
     width: 80%;
 }
 
+.audio_controls >* {
+    vertical-align: middle;
+}
+
 .audio_controls >*:not(.fa-play) {
     padding: 0 0.5rem;
 }
 
 .audio_controls .fa-play {
     padding: 0 2rem;
+    font-size: 1.5rem;
 }
 
 #audio_bar {
-    width: 100%;
-    padding: 0.5rem 0;
+    width: 80%;
+    margin-top: 1.5rem;
 }
 
 
+.footer_right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+.footer_right >*:not(.volume) {
+    padding: 0 1rem;
+}
+
+.volume {
+    flex-grow: 1;
+}
+
+.volume i {
+    display: inline-block;
+    
+}
+
+.volume .volume_bar {
+    flex-basis: 80%;
+}
+
+/* #endregion */
 
 
 
 
+
+/*
 input[type="range"]::-webkit-slider-thumb,
 input[type="range"]::-moz-range-thumb {
     visibility: hidden;
-}
-/* #endregion */
+}*/
+
 
 /* #region debug */
 
