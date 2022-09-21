@@ -98,6 +98,29 @@ footer {
     font-size: 1.2rem;
 }
 
+.footer_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.audio_player {
+    text-align: center;
+    width: 80%;
+}
+
+.audio_controls >*:not(.fa-play) {
+    padding: 0 0.5rem;
+}
+
+.audio_controls .fa-play {
+    padding: 0 2rem;
+}
+
+#audio_bar {
+    width: 100%;
+    padding: 0.5rem 0;
+}
 
 
 
