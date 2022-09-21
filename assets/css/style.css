@@ -3,3 +3,53 @@
     margin: 0;
     padding: 0;
 }
+ .wrapper {
+    height: 100vh;
+    flex-direction: column;
+ }
+
+ nav, main {
+    height: calc(100vh - 100px);
+ }
+
+/* Utilities */
+
+.d-flex {
+    display: flex;
+}
+
+/* #region nav */
+nav {
+    width: 200px;
+}
+
+/* #endregion */
+
+/* #region main */
+main {
+    flex-grow: 1;
+}
+
+/* #endregion */
+
+
+footer {
+    height: 100px;
+}
+
+/* #region debug */
+
+nav {
+    background-color: green;
+    
+}
+
+main {
+    background-color: red;
+    
+}
+
+footer {
+    background-color: yellow;
+}
+/* #endregion */
