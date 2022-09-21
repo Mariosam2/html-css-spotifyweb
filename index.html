@@ -20,7 +20,7 @@
         <div class="top d-flex">
             <header class="d-flex" id="site_header">
                 <picture>
-                    <source media="(max-width: 640px)" srcset="./assets/img/logo-small.svg">
+                    <source media="(max-width: 768px)" srcset="./assets/img/logo-small.svg">
                     <img src="./assets/img/logo.svg" alt="logo">
                 </picture>
                 <nav id="site_nav">
@@ -54,14 +54,13 @@
         <!-- /.top -->
         <footer class="d-flex" id="site_footer">
             <div class="footer_left d-flex">
-                <div class="song_details d-flex">
-                    <img src="./assets/img/sinister.jpeg" alt="">
+                <div class="song">
+                    <img src="./assets/img/cure.jpeg" alt="">
                     <span class="song_name">Sinister <br> <span class="caption">Brano Nome</span></span>
-
                 </div>
                 <div class="like_n_folder d-flex">
-                    <i class="fa-regular fa-heart caption"></i>
-                    <i class="fa-regular fa-folder caption"></i>
+                    <i class="fa-regular fa-heart caption mobile_toggle"></i>
+                    <i class="fa-regular fa-folder caption mobile_toggle"></i>
                 </div>
             </div>
             <div class="footer_center">
@@ -83,7 +82,7 @@
                 <i class="fa-solid fa-display"></i>
                 <div class="volume d-flex align-center">
                     <i class="fa-solid fa-volume-high"></i>
-                    <div class="volume_bar">volume</div>
+                    <div class="volume_bar"><div class="thumb"></div></div>
                 </div>
             </div>
         </footer>
