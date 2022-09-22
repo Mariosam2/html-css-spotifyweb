@@ -28,7 +28,7 @@ body {
  }
 
  .caption {
-    font-weight: 500;
+    font-weight: 400;
     color: var(--var-caption-text);
  }
 
@@ -37,6 +37,7 @@ body {
     
  }
 
+ 
  img {
     max-width: 100%;
  }
@@ -99,6 +100,10 @@ header ul li {
     padding: 0.4rem 0;
 }
 
+header ul li h3 {
+    font-weight: 500;
+}
+
 header .playlist li {
     font-size: 0.9rem;
 
@@ -138,6 +143,10 @@ header ul li:hover a i {
     margin-top: 1rem;
 }
 
+.profile {
+    font-weight: 600;
+}
+
 .profile img {
     width: 1.5rem;
     height: 1.5rem;
@@ -157,7 +166,7 @@ main {
 }
 
 .call_to_action{
-    height: 150px;
+    height: 80px;
     background-color: var(--var-bg-upgrade);
     display: flex;
     justify-content: flex-end;
@@ -170,14 +179,24 @@ main {
 .call_to_action a {
     color: white;
     display: inline-block;
-    padding: 1rem;
+    padding: 1rem 2rem;
     border: 2px solid white;
-    border-radius: 18px;
+    border-radius: 24px;
 }
 
 .container {
     background-color: var(--var-bg-main);
     padding: 1rem;
+    height: calc(100% - 80px);
+    overflow: auto;
+    
+    
+    
+}
+
+.music {
+    max-width: 1440px;
+    overflow: auto;
 }
 
 .discover {
@@ -188,7 +207,20 @@ main {
 
 .discover .caption {
     padding: 1rem;
-    font-weight: 600;
+    font-weight: 500;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.box {
+    width: calc(100%/6);
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
 }
 
 /* #endregion */
@@ -430,7 +462,9 @@ footer {
 
 /* lg-md */
 @media  screen and (max-width: 1200px) {
-    
+    .box {
+        width: calc(100%/4);
+    }
 }
 
 /* md-s */
@@ -438,6 +472,11 @@ footer {
     header picture {
         width: 100%;
     }
+
+    .box {
+        width: calc(100%/2);
+    }
+
     .footer_left, .footer_right {
         max-width: 12.5rem;
     }
@@ -504,6 +543,11 @@ footer {
     }
     /* #endregion */
     
+
+    .call_to_action {
+        height: 80px;
+    
+    }
     
     
     .footer_center .audio_controls .fa-play{
