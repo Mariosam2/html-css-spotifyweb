@@ -234,7 +234,7 @@ main {
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin: 1rem 0;
+    padding: 2rem 0;
 }
 
 .container .caption {
@@ -519,11 +519,6 @@ footer {
 
 
 /* responsive - dekstop first */
-@media screen and (max-width: 1440px) {
-
-    
-    
-}
 
 /* lg-md */
 @media  screen and (max-width: 1200px) {
@@ -625,6 +620,10 @@ footer {
 @media screen and (max-width:640px) {
     html {
         font-size: 12px;
+    }
+
+    .row {
+        padding-bottom: 5rem;
     }
 
     .mobile_toggle {
