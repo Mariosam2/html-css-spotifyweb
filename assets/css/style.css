@@ -180,6 +180,17 @@ main {
     padding: 1rem;
 }
 
+.discover {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.discover .caption {
+    padding: 1rem;
+    font-weight: 600;
+}
+
 /* #endregion */
 
 /* #region footer(audio_player) */
@@ -411,30 +422,22 @@ footer {
 
 
 /* responsive - dekstop first */
-
-@media  screen and (max-height: 630px) {
-    header {
-        height: fit-content;
-    }
-
-    .top {
-        overflow: auto;
-    }
-}
-
 @media screen and (max-width: 1440px) {
 
     
     
 }
 
-/* md */
+/* lg-md */
 @media  screen and (max-width: 1200px) {
     
 }
 
-/* s */
+/* md-s */
 @media screen and (max-width: 992px) {
+    header picture {
+        width: 100%;
+    }
     .footer_left, .footer_right {
         max-width: 12.5rem;
     }
@@ -451,7 +454,7 @@ footer {
     
 }
 
-/* xs */
+/* s-xs */
 @media screen and (max-width: 768px) {
     
     
@@ -543,6 +546,17 @@ footer {
     
     
     
+}
+
+/* height */
+@media  screen and (max-height: 630px) {
+    header {
+        height: fit-content;
+    }
+
+    .top {
+        overflow: auto;
+    }
 }
 
     
