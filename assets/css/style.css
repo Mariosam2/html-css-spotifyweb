@@ -242,7 +242,9 @@ footer {
 }
 
 
-
+.footer_left {
+    object-fit: contain;
+}
 
 
 .footer_left .song {
@@ -544,6 +546,8 @@ footer {
     /* #endregion */
     
 
+    
+
     .call_to_action {
         height: 80px;
     
@@ -556,7 +560,7 @@ footer {
     
 }
 
-@media screen and (max-width:640px) {
+@media screen and (max-width:680px) {
     html {
         font-size: 12px;
     }
@@ -569,11 +573,7 @@ footer {
         max-width: 8rem;
     }
     
-    .footer_left img {
-        max-width: 30%;
-        object-fit: contain;
-
-    }
+    
 
     .footer_right{
         flex-wrap: wrap;
