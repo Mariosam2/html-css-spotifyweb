@@ -593,16 +593,24 @@ footer {
 }
 
 /* height */
-@media  screen and (max-height: 630px) {
+/*@media  screen and (max-height: 720px) {
     header {
-        height: fit-content;
+       height: 100vh;
+    }
+
+    main {
+        height: 100vh;
     }
 
     .top {
+       
         overflow: auto;
+       
     }
-}
 
+    
+}
+*/
     
     
     
