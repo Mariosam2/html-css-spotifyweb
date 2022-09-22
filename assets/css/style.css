@@ -210,7 +210,7 @@ footer {
 
 .like_n_folder >* {
     padding: 0 0.5rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 
 }
 
@@ -222,9 +222,12 @@ footer {
 }
 
 .audio_player {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
 }
+
 
 .audio_controls >* {
     vertical-align: middle;
@@ -264,24 +267,51 @@ footer {
     
 }
 
-.volume .volume_bar {
+.volume .volume_bar, .audio_bar {
     position: relative;
-    flex-basis: 100%;
     height: 5px;
     background-color: white;
     border-radius: 18px;
+}
+
+.volume .volume_bar {
+    flex-basis: 100%;
     margin-left: 0.5rem;
 }
 
-.volume .volume_bar:hover .thumb {
+.audio_bar {
+   width: 60%;
+   margin-top: 1.5rem;
+}
+
+.audio_bar .left, .audio_bar .right {
+    position: absolute;
+    display: inline-block;
+    padding: 0.5rem;
+}
+
+.audio_bar .left {
+    bottom: 50%;
+    right: 100%;
+    translate: 0 50%;
+}
+
+.audio_bar .right {
+    bottom: 50%;
+    left: 100%;
+    translate: 0 50%;
+}
+
+
+.volume .volume_bar:hover .thumb, .audio_bar:hover .thumb {
     display: block;
 }
 
-.volume .volume_bar:hover {
+.volume_bar:hover, .audio_bar:hover {
     background-color: var(--var-hover);
 }
 
-.volume .overlay_bar{
+.overlay_bar{
     position: absolute;
     right: 0;
     height: 5px;
@@ -290,7 +320,7 @@ footer {
     border-radius: 18px;
 }
 
-.volume_bar .thumb {
+.volume_bar .thumb, .audio_bar .thumb {
     display: none;
     height: 1rem;
     width: 1rem;
@@ -460,12 +490,16 @@ footer {
 
     }
 
-   
-    
-    
     .footer_right{
         flex-wrap: wrap;
     }
+
+    .footer_right .volume {
+        width: 100%;
+    }
+    
+    
+    
 }
 
     
