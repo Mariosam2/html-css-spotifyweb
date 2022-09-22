@@ -198,7 +198,6 @@ main {
 
 .music {
     max-width: 1440px;
-    overflow: auto;
 }
 
 .discover {
@@ -277,6 +276,7 @@ main {
 
 .box.radius img {
     border-radius: 50%;
+    object-fit: cover;
 }
 
 
@@ -324,7 +324,12 @@ footer {
 
 .footer_left .song_name .caption {
     font-size: 0.8rem;
+
     
+}
+
+.footer_left .song_name .caption:hover {
+    text-decoration: underline;
 }
 
 
@@ -612,7 +617,7 @@ footer {
     
     
     .footer_center .audio_controls .fa-play{
-        padding: 0 1rem;
+        padding: 0 0.8rem;
     }
     
 }
@@ -636,6 +641,14 @@ footer {
     
     .footer_left .song_name .caption {
         font-size: 0.6rem;
+    }
+
+    .audio_controls > :not(.fa-play){
+        padding: 0;
+    }
+
+    .audio_controls .fa-shuffle, .audio_controls .fa-arrow-rotate-right {
+        padding: 0 0.4rem;
     }
     
 
