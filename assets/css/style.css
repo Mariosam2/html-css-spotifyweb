@@ -242,8 +242,9 @@ footer {
 }
 
 
-.footer_left {
+.footer_left img{
     object-fit: contain;
+    max-width: 50%;
 }
 
 
