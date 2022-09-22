@@ -32,6 +32,11 @@ body {
     color: var(--var-caption-text);
  }
 
+ .caption:hover {
+    color: white;
+    cursor: pointer;
+ }
+
  .top {
    height: calc(100vh - 100px);
     
@@ -74,6 +79,8 @@ header {
     background-color: var(--var-black);
     padding: 1rem 1rem 0 1rem;
     flex-direction: column;
+    overflow: auto;
+   
     
    
 }
@@ -119,11 +126,6 @@ ul li .create {
 
 .playlist {
     flex-grow: 1;
-}
-
-header ul li:hover a, .install:hover {
-    color: white;
-    cursor: pointer;
 }
 
 header ul li:hover a i {
@@ -208,6 +210,26 @@ main {
 .discover .caption {
     padding: 1rem;
     font-weight: 500;
+    
+}
+
+.discover .caption hr {
+    display: none;
+}
+
+.discover .caption:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.discover .caption:hover hr {
+    display: block;
+    margin:0 auto;
+    width: 60%;
+    border-color: var(--var-hover);
+    border-width: 2px;
+    border-radius: 10px;
+    
 }
 
 .row {
@@ -216,12 +238,47 @@ main {
     margin: 1rem 0;
 }
 
+.container .caption {
+    display: inline-block
+}
+
+.container .row .caption:hover {
+    cursor: default;
+    color: var(--var-caption-text);
+}
+
+.title {
+    margin: 1.5rem 0 1rem 0;
+}
+
+.title, .container .caption {
+    padding-left: 0.5rem;
+}
+
 .box {
     width: calc(100%/6);
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     padding: 0.5rem;
 }
+
+.box span, .box h3{
+    width: 100%;
+    text-align: center;
+    padding-top: 0.5rem;
+
+}
+.box img {
+    width: 100%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.box.radius img {
+    border-radius: 50%;
+}
+
 
 /* #endregion */
 
@@ -540,8 +597,7 @@ footer {
     }
 
     .header_bottom img {
-        width: 2rem;
-        height: 2rem;
+        
         margin-right: 0;
     }
     /* #endregion */
@@ -573,7 +629,14 @@ footer {
     .footer_left, .footer_right {
         max-width: 8rem;
     }
+
+    .footer_left .song_name {
+        font-size: 0.8rem;
+    }
     
+    .footer_left .song_name .caption {
+        font-size: 0.6rem;
+    }
     
 
     .footer_right{
@@ -593,25 +656,17 @@ footer {
     
 }
 
-/* height */
-/*@media  screen and (max-height: 720px) {
-    header {
-       height: 100vh;
+@media  screen and (max-height: 350px) {
+    .height_toggle {
+        display: none;
     }
 
-    main {
-        height: 100vh;
+    .container {
+        height: 100%;
     }
-
-    .top {
-       
-        overflow: auto;
-       
-    }
-
-    
 }
-*/
+
+
     
     
     
