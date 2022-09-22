@@ -3,7 +3,7 @@
     --var-caption-text: #717171;
     --var-black: #000000;
     --var-bg-upgrade: #080b12;
-    --var-bg-main: 141922;
+    --var-bg-main: #141922;
     --var-hover: #adff2f;
 
 }
@@ -17,7 +17,9 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-
+body {
+    color: white;
+}
 
  .wrapper {
     height: 100vh;
@@ -68,7 +70,6 @@ header {
     width: 275px;
     background-color: var(--var-black);
     padding: 1rem 1rem 0 1rem;
-    color: white;
     flex-direction: column;
     
    
@@ -153,15 +154,39 @@ main {
     flex-grow: 1;
 }
 
+.call_to_action{
+    height: 150px;
+    background-color: var(--var-bg-upgrade);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+    
+    
+}
+
+.call_to_action a {
+    color: white;
+    display: inline-block;
+    padding: 1rem;
+    border: 2px solid white;
+    border-radius: 18px;
+}
+
+.container {
+    background-color: var(--var-bg-main);
+    padding: 1rem;
+}
+
 /* #endregion */
 
 /* #region footer(audio_player) */
 footer {
     height: 100px;
     background-color: var(--var-bg-footer);
-    color: white;
     padding: 0.8rem;
     justify-content: space-between;
+    
 
 }
 
@@ -288,6 +313,7 @@ footer {
     position: absolute;
     display: inline-block;
     padding: 0.5rem;
+    font-size: 0.8rem;
 }
 
 .audio_bar .left {
@@ -485,13 +511,18 @@ footer {
     }
     
     .footer_left img {
-        max-width: 50%;
+        max-width: 30%;
         object-fit: contain;
 
     }
 
     .footer_right{
         flex-wrap: wrap;
+        padding: 1rem;
+    }
+
+    .footer_right > :not(.volume){
+        padding: 0 0.5rem 0 0;
     }
 
     .footer_right .volume {
