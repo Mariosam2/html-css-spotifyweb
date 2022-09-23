@@ -79,7 +79,8 @@ header {
     background-color: var(--var-black);
     padding: 1rem 1rem 0 1rem;
     flex-direction: column;
-    overflow: auto;
+    min-height: fit-content;
+    
    
     
    
@@ -109,6 +110,11 @@ header ul li {
 
 header ul li h3 {
     font-weight: 500;
+}
+
+header .playlist {
+    overflow-y: auto;
+    height: fit-content;
 }
 
 header .playlist li {
