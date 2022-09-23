@@ -123,12 +123,7 @@ header ul li {
 
 
 
-.playlist ul {
-    padding-right: 1rem;
-    overflow-y: scroll;
-    width: fit-content;
-    height: fit-content;
-}
+
 
 .playlist li {
     font-size: 0.9rem;
@@ -311,20 +306,14 @@ main {
     padding: 0.5rem;
 }
 
-
-
-.box img {
-    height: 100%;
-    object-fit: cover;
-}
-
 .box.radius img, .box.radius .layover {
     border-radius: 50%;
 }
-.box img .box.radius img {
+.box img, .box.radius img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
-
 
 .box span, .box h3{
     width: 100%;
@@ -584,12 +573,20 @@ footer {
     .box {
         width: calc(100%/4);
     }
+
+    .row.lg .box:nth-child(n + 5){
+        display: none;
+    }
 }
 
 /* md-s */
 @media screen and (max-width: 992px) {
     header picture {
         width: 100%;
+    }
+
+    .row.lg .box:nth-child(n + 3){
+        display: none;
     }
 
     .box {
@@ -730,6 +727,15 @@ footer {
     
     
     
+}
+
+@media screen and (max-height: 640px){
+    .playlist ul {
+        overflow-y: auto;
+        max-height: 100px;
+        
+    }
+
 }
 
 @media  screen and (max-height: 350px) {
