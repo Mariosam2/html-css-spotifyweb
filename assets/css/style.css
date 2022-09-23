@@ -111,18 +111,28 @@ header ul li {
 .playlist {
     flex-grow: 1;
 }
-header .playlist h3 {
+
+.playlist h3, .playlist a {
+    padding-bottom: 0.8rem;
+}
+
+.playlist h3 {
     text-transform: uppercase;
     font-weight: 500;
 }
 
-header .playlist ul {
+
+
+.playlist ul {
+    padding-right: 1rem;
     overflow-y: scroll;
-    height: 400px;
+    width: fit-content;
+    height: fit-content;
 }
 
-header .playlist li {
+.playlist li {
     font-size: 0.9rem;
+    
 
 }
 
